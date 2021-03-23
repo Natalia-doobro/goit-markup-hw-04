@@ -1,0 +1,388 @@
+/*Палитра
+цвет теекста заголовка - #FFFFFF;
+цвет теекста подзаголовков - #212121;
+цвет теекста - #757575;
+текст силки при наведении - #2196F3;
+текст в подвале - #FFFFFF; rgba(255, 255, 255, 0.6);
+акцент -  #2196F3;
+*/
+
+:root {
+  --body-color: #ffffff;
+  --text-color: #757575;
+  --title-color: #212121;
+  --hover-color: #2196f3;
+  --section-color: #f5f4fa;
+  --dark-bg-color: #2f303a;
+  --dark-bg-text-color: #ffffff;
+  --button-color: #2196f3;
+  --dark-dg-filters-color: #f5f4fa;
+}
+/* Главная */
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+.zeroing {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px 0 15px;
+}
+/*---------------------------------------------------------------------------------------------------*/
+/*Шапка сторінки (верхня лінія)*/
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+/*Логотип*/
+.logo.link {
+  color: var(--title-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.logo-web {
+  color: var(--hover-color);
+}
+/*Навигацыя*/
+.link {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  margin-left: 93px;
+}
+.menu .menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+.menu.list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  --text-color: #212121;
+}
+.menu .link.current {
+  color: var(--hover-color);
+}
+.link:active,
+.link:hover,
+.link:focus {
+  color: var(--hover-color);
+}
+/*Номер телефона и электронная почта*/
+.contact {
+  display: flex;
+  margin-left: auto;
+}
+.contact.list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.contact .contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+/*---------------------------------------------------------------------------------------------------*/
+/*Унікальний контент сторінки*/
+.section .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.container.not {
+  padding-top: 0;
+}
+.section-title {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  margin-bottom: 10px;
+}
+.container > .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-text {
+  color: var(--text-color);
+  font-weight: 400;
+}
+.img {
+  display: block;
+}
+
+/*Шапка*/
+.hero .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.hero {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/imgfon.jpg");
+  background-color: var(--dark-bg-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.hero-title {
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--dark-bg-text-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.37;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.button {
+  padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--dark-bg-text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.button:active,
+.button:hover,
+.button:focus {
+  --button-color: #ffffff;
+  color: var(--hover-color);
+}
+
+/*Особливість*/
+.items-feature {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-feature {
+  flex-basis: calc((100% - 30px * 3) / 4);
+}
+.items-feature .list-feature:not(:last-child) {
+  margin-right: 30px;
+}
+.items-feature .section-title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.items-feature .section-text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/*Чим ми займаемося*/
+.items-hobbies {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-hobbies {
+  flex-basis: calc((100% - 30px * 2) / 3);
+}
+.items-hobbies .list-hobbies:not(:last-child) {
+  margin-right: 30px;
+}
+
+/*Наша команда*/
+.section.team {
+  background: var(--section-color);
+}
+.items-team {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-team {
+  flex-basis: calc((100% - 30px * 3) / 4);
+  background: var(--dark-bg-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.list-team:hover,
+.list-team:focus,
+.list-team:active {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.items-team .list-team:not(:last-child) {
+  margin-right: 30px;
+}
+.list-team .text-card {
+  padding: 30px 59px;
+  border-radius: 0px 0px 4px 4px;
+}
+.section-subtitle {
+  margin-bottom: 10px;
+
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: center;
+}
+.items-team .section-text {
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/*Підвал сторінки*/
+.footer {
+  background: var(--dark-bg-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/*Логотип*/
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 0;
+
+  color: var(--dark-bg-text-color);
+}
+/*Адрес, номер телефона и электронная почта*/
+.adress {
+  color: var(--dark-bg-text-color);
+  font-style: normal;
+}
+.text-adress {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+.contact-footer .link {
+  --text-color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.contact-footer .item-contact-footer:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/* страница портфолио */
+.section-portfolio .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section-portfolio .section-title {
+  margin-bottom: 0;
+  font-size: 0;
+}
+
+/* кнопки фильтра */
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filters .item-filters:not(:last-child) {
+  margin-right: 8px;
+}
+.filters-button {
+  padding: 6px 22px;
+
+  background: var(--dark-dg-filters-color);
+  border-radius: 4px;
+  color: var(--title-color);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  cursor: pointer;
+}
+.filters-button:active,
+.filters-button:hover,
+.filters-button:focus {
+  background: var(--button-color);
+  color: var(--dark-bg-text-color);
+}
+/*Проэкт*/
+.items-project {
+  display: flex;
+  flex-wrap: wrap;
+  /* простой вариант (но без фона)*/
+  margin-left: -30px;
+  margin-top: -30px;
+  /*==================*/
+}
+.item {
+  flex-basis: calc((100% - 30px * 3) / 3);
+  /*простой вариант (но без фона)*/
+  margin-left: 30px;
+  margin-top: 30px;
+  /*==================*/
+}
+/* вариант сетки с применением вычислений
+.items-project .item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+.items-project .item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+*/
+.text-image {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+.items-project .section-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.items-project .section-text {
+  font-size: 16px;
+  line-height: 1.8;
+}
