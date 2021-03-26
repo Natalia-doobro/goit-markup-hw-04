@@ -17,6 +17,7 @@
   --dark-bg-text-color: #ffffff;
   --button-color: #2196f3;
   --dark-dg-filters-color: #f5f4fa;
+  --icon-color: #afb1b8;
 }
 /* Главная */
 body {
@@ -193,6 +194,23 @@ body {
 }
 
 /*Особливість*/
+.feature-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--section-color);
+  border-radius: 4px;
+}
+.feature-icon {
+  display: inline-flex;
+  margin-bottom: 30px;
+}
+.feature-link .icon {
+  width: 70px;
+  height: 70px;
+}
 .items-feature {
   display: flex;
   flex-wrap: wrap;
@@ -238,20 +256,21 @@ body {
   background: var(--dark-bg-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
-.list-team:hover,
+/*.list-team:hover,
 .list-team:focus,
 .list-team:active {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+}*/
 .items-team .list-team:not(:last-child) {
   margin-right: 30px;
 }
 .list-team .text-card {
-  padding: 30px 59px;
+  padding: 30px 57px;
   border-radius: 0px 0px 4px 4px;
 }
 .section-subtitle {
@@ -264,9 +283,57 @@ body {
   text-align: center;
 }
 .items-team .section-text {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.35;
   text-align: center;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--dark-bg-text-color);
+}
+.social-link:hover .icon,
+.social-link:focus .icon,
+.social-link:active .icon {
+  fill: var(--dark-bg-text-color);
+}
+.social-link:hover,
+.social-link:focus,
+.social-link:active {
+  background-color: var(--hover-color);
+}
+.social-icons .social-icons-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-icons {
+  display: inline-flex;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+
+/*Постоянные клиенты*/
+.container.clients {
+  text-align: center;
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--dark-bg-text-color);
+}
+.clients-list {
+  display: inline-flex;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
