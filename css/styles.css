@@ -96,6 +96,7 @@ body {
 .contact {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 .contact.list .link {
   display: block;
@@ -104,6 +105,31 @@ body {
 }
 .contact .contact-item:not(:last-child) {
   margin-right: 50px;
+}
+.contact-item .link {
+  display: flex;
+  align-items: center;
+}
+
+.contact-item .icon {
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  stroke: var(--text-color);
+}
+.contact-item.mail .icon {
+  width: 16px;
+  height: 12px;
+  stroke: var(--text-color);
+}
+
+.contact-item:hover .icon,
+.contact-item:focus .icon,
+.contact-item:active .icon,
+.contact-item.mail:hover .icon,
+.contact-item.mail:focus .icon,
+.contact-item.mail:active .icon {
+  stroke: var(--hover-color);
 }
 /*---------------------------------------------------------------------------------------------------*/
 /*Унікальний контент сторінки*/
@@ -252,25 +278,20 @@ body {
   flex-wrap: wrap;
 }
 .list-team {
+  max-width: 270px;
+  max-height: 428px;
   flex-basis: calc((100% - 30px * 3) / 4);
   background: var(--dark-bg-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
-/*.list-team:hover,
-.list-team:focus,
-.list-team:active {
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}*/
+
 .items-team .list-team:not(:last-child) {
   margin-right: 30px;
 }
 .list-team .text-card {
-  padding: 30px 57px;
+  padding: 30px 32px;
   border-radius: 0px 0px 4px 4px;
 }
 .section-subtitle {
@@ -329,13 +350,57 @@ body {
   align-items: center;
   width: 170px;
   height: 90px;
-  border-radius: 50%;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
   background-color: var(--dark-bg-text-color);
+}
+.clients-list .clients-icons-item:not(:last-child) {
+  margin-right: 30px;
 }
 .clients-list {
   display: inline-flex;
 }
-
+.social-icons {
+  display: inline-flex;
+}
+.icon {
+  fill: var(--icon-color);
+}
+.icon-logo-1 {
+  width: 44px;
+  height: 49px;
+}
+.icon-logo-2 {
+  width: 40px;
+  height: 52px;
+}
+.icon-logo-3 {
+  width: 41px;
+  height: 42px;
+}
+.icon-logo-4 {
+  width: 79px;
+  height: 42px;
+}
+.icon-logo-5 {
+  width: 59px;
+  height: 47px;
+}
+.icon-logo-6 {
+  width: 88px;
+  height: 45px;
+}
+.clients-link:hover .icon,
+.clients-link:focus .icon,
+.clients-link:active .icon {
+  fill: var(--hover-color);
+}
+.clients-link:hover,
+.clients-link:focus,
+.clients-link:active {
+  border: 1px solid var(--hover-color);
+}
 /*---------------------------------------------------------------------------------------------------*/
 /*Підвал сторінки*/
 .footer {
@@ -372,6 +437,45 @@ body {
 }
 .contact-footer .item-contact-footer:not(:last-child) {
   margin-bottom: 4px;
+}
+.footer-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--dark-bg-text-color);
+}
+div.footer-position {
+  max-width: 231px;
+}
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer-position {
+  flex-basis: 50%;
+}
+.footer-position:not(:last-child) {
+  margin-right: 70px;
+}
+.social-link.footer-icon {
+  --dark-bg-text-color: rgba(255, 255, 255, 0.1);
+}
+.social-link.footer-icon .icon {
+  --icon-color: #ffffff;
+}
+.social-link.footer-icon:hover .icon,
+.social-link.footer-icon:focus .icon,
+.social-link.footer-icon:active .icon {
+  fill: var(--icon-color);
+}
+.social-link.footer-icon:hover,
+.social-link.footer-icon:focus,
+.social-link.footer-icon:active {
+  background-color: var(--hover-color);
 }
 
 /*---------------------------------------------------------------------------------------------------*/
@@ -428,6 +532,8 @@ body {
   margin-left: 30px;
   margin-top: 30px;
   /*==================*/
+  max-width: 370px;
+  max-height: 404px;
 }
 /* вариант сетки с применением вычислений
 .items-project .item:not(:nth-last-child(-n + 3)) {
@@ -452,4 +558,12 @@ body {
 .items-project .section-text {
   font-size: 16px;
   line-height: 1.8;
+}
+.item:hover,
+.item:focus,
+.item:active {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
