@@ -99,9 +99,11 @@ body {
   align-items: center;
 }
 .contact.list .link {
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  display: flex;
+  align-content: center;
 }
 .contact .contact-item:not(:last-child) {
   margin-right: 50px;
@@ -220,7 +222,7 @@ body {
 }
 
 /*Особливість*/
-.feature-link {
+.feature-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,7 +235,7 @@ body {
   display: inline-flex;
   margin-bottom: 30px;
 }
-.feature-link .icon {
+.feature-icon .icon {
   width: 70px;
   height: 70px;
 }
@@ -279,7 +281,7 @@ body {
 }
 .list-team {
   max-width: 270px;
-  max-height: 428px;
+
   flex-basis: calc((100% - 30px * 3) / 4);
   background: var(--dark-bg-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -334,7 +336,7 @@ body {
 .social-icons {
   display: inline-flex;
 }
-.icon {
+.social-icons-item .icon {
   width: 20px;
   height: 20px;
   fill: var(--icon-color);
@@ -367,30 +369,7 @@ body {
 .icon {
   fill: var(--icon-color);
 }
-.icon-logo-1 {
-  width: 44px;
-  height: 49px;
-}
-.icon-logo-2 {
-  width: 40px;
-  height: 52px;
-}
-.icon-logo-3 {
-  width: 41px;
-  height: 42px;
-}
-.icon-logo-4 {
-  width: 79px;
-  height: 42px;
-}
-.icon-logo-5 {
-  width: 59px;
-  height: 47px;
-}
-.icon-logo-6 {
-  width: 88px;
-  height: 45px;
-}
+
 .clients-link:hover .icon,
 .clients-link:focus .icon,
 .clients-link:active .icon {
@@ -452,8 +431,7 @@ div.footer-position {
 }
 .flexbox {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: baseline;
 }
 .footer-position {
   flex-basis: 50%;
@@ -516,6 +494,9 @@ div.footer-position {
 .filters-button:focus {
   background: var(--button-color);
   color: var(--dark-bg-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 /*Проэкт*/
 .items-project {
@@ -533,7 +514,6 @@ div.footer-position {
   margin-top: 30px;
   /*==================*/
   max-width: 370px;
-  max-height: 404px;
 }
 /* вариант сетки с применением вычислений
 .items-project .item:not(:nth-last-child(-n + 3)) {
@@ -562,7 +542,6 @@ div.footer-position {
 .item:hover,
 .item:focus,
 .item:active {
-  border: 1px solid #eeeeee;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
